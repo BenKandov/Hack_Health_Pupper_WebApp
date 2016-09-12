@@ -25,7 +25,7 @@ def yielding(ls):
 
 def scrape_pic(old_doggo):
 
-    submissions = reddit.get_subreddit(subreddit).get_new(limit=300)
+    submissions = reddit.get_subreddit(subreddit).get_new(limit=100)
     #now let's parse through what we scraped and decide what we return
 
     temp_list = list(yielding(submissions))
