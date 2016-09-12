@@ -1,1 +1,1 @@
-web: python HackHealthPupper.py
+web: python3 hackhealthpupper.py
