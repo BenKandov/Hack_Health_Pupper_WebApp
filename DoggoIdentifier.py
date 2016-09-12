@@ -1,9 +1,10 @@
 from clarifai.client import ClarifaiApi
-from config import clientID, clientSecret
+#from config import clientID, clientSecret
+import os
 import random
 
 
-clarifai_api = ClarifaiApi(clientID, clientSecret)
+clarifai_api = ClarifaiApi(  os.environ.get('clientID'), os.environ.get('clientSecret'))
 # test clarifai-python
 
 def clarifai_test():
