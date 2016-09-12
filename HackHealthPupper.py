@@ -25,7 +25,7 @@ def yielding(ls):
 
 def scrape_pic(old_doggo):
 
-    submissions = reddit.get_subreddit(subreddit).get_new(limit=100)
+    submissions = reddit.get_subreddit(subreddit).get_new(limit=300)
     #now let's parse through what we scraped and decide what we return
 
     temp_list = list(yielding(submissions))
@@ -113,7 +113,8 @@ def show_top_tags():
     return render_template('pupperPage.html',values=values, description=description, sound=sounds[random.randint(0,3)],image_url=current_doggo.url, doggo_message=current_doggo.bork_message())
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT'))
+    app.run(host='0.0.0.0', port=port,debug=True)
 
 
 
